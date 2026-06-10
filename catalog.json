@@ -1,0 +1,487 @@
+{
+  "categories": [
+    {
+      "id": "gomogen",
+      "name": "Гомогенные покрытия",
+      "description": "Однородные виниловые покрытия",
+      "icon": "homogen",
+      "collections": [
+        {
+          "id": "forbo_sphera",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Sphera Essence",
+          "products": [
+            {
+              "id": "gom_forbo_sphera_001",
+              "name": "Sphera Essence — Paper",
+              "article": "50512",
+              "price": "1 595–1 710 сом/м²",
+              "description": "Sphera Essence - гомогенное виниловое покрытие премиального класса для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал отличается высокой устойчивостью к истиранию, царапинам и механическим нагрузкам, сохраняя внешний вид даже при интенсивной эксплуатации. Коллекция выполнена в современном дизайне с эффектом гранитной поверхности и подходит для медицинских учреждений, офисов, образовательных и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 mm" },
+                { "label": "Размер рулона", "value": "2×27 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 300 м²", "value": "1 710 сом" },
+                { "label": "Цена от 300 м²", "value": "1 595 сом" }
+              ],
+              "images": [
+                "images/gom_forbo_sphera_001_1.jpg",
+                "images/gom_forbo_sphera_001_2.jpg"
+              ]
+            },
+            {
+              "id": "gom_forbo_sphera_002",
+              "name": "Sphera Essence — Gentle sky",
+              "article": "50531",
+              "price": "— сом/м²",
+              "description": "Sphera Essence - гомогенное виниловое покрытие премиального класса для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал отличается высокой устойчивостью к истиранию, царапинам и механическим нагрузкам, сохраняя внешний вид даже при интенсивной эксплуатации. Коллекция выполнена в современном дизайне с эффектом гранитной поверхности и подходит для медицинских учреждений, офисов, образовательных и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 mm" },
+                { "label": "Размер рулона", "value": "2×27 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 300 м²", "value": "1 710 сом" },
+                { "label": "Цена от 300 м²", "value": "1 595 сом" }
+              ],
+              "images": [
+                "images/gom_forbo_sphera_002_1.jpg",
+                "images/gom_forbo_sphera_002_2.jpg"
+              ]
+            },
+            {
+              "id": "gom_forbo_sphera_003",
+              "name": "Sphera Essence — Trout",
+              "article": "50511",
+              "price": "— сом/м²",
+              "description": "Sphera Essence - гомогенное виниловое покрытие премиального класса для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал отличается высокой устойчивостью к истиранию, царапинам и механическим нагрузкам, сохраняя внешний вид даже при интенсивной эксплуатации. Коллекция выполнена в современном дизайне с эффектом гранитной поверхности и подходит для медицинских учреждений, офисов, образовательных и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 mm" },
+                { "label": "Размер рулона", "value": "2×27 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 300 м²", "value": "1 710 сом" },
+                { "label": "Цена от 300 м²", "value": "1 595 сом" }
+              ],
+              "images": [
+                "images/gom_forbo_sphera_003_1.jpg",
+                "images/gom_forbo_sphera_003_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gerflor_atlas",
+          "brand": "Gerflor",
+          "logo": "images/logos/gerflor.png",
+          "collection": "Mipolam Atlas",
+          "products": [
+            {
+              "id": "gom_gerflor_atlas_001",
+              "name": "Mipolam Atlas — Creamy White",
+              "article": "59841",
+              "price": "1 650 сом/м²",
+              "description": "Gerflor Mipolam Atlas - гомогенное виниловое покрытие для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал обладает высокой устойчивостью к истиранию, химическим воздействиям и механическим нагрузкам. Покрытие оснащено защитным слоем Easycare™ для облегчения ухода и сохранения внешнего вида на протяжении всего срока эксплуатации. Подходит для медицинских учреждений, образовательных объектов, офисов и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "5,8 mm" },
+                { "label": "Размер рулона", "value": " 2×20 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" }
+              ],
+              "images": [
+                "images/gom_gerflor_atlas_001_1.jpg",
+                "images/gom_gerflor_atlas_001_2.jpg"
+              ]
+            },
+            {
+              "id": "gom_gerflor_atlas_002",
+              "name": "Mipolam Atlas —  Sand",
+              "article": "59851",
+              "price": "1 650 сом/м²",
+              "description": "Gerflor Mipolam Atlas - гомогенное виниловое покрытие для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал обладает высокой устойчивостью к истиранию, химическим воздействиям и механическим нагрузкам. Покрытие оснащено защитным слоем Easycare™ для облегчения ухода и сохранения внешнего вида на протяжении всего срока эксплуатации. Подходит для медицинских учреждений, образовательных объектов, офисов и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "5,8 mm" },
+                { "label": "Размер рулона", "value": " 2×20 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" }
+              ],
+              "images": [
+                "images/gom_gerflor_atlas_002_1.jpg",
+                "images/gom_gerflor_atlas_002_2.jpg"
+              ]
+            },
+            {
+              "id": "gom_gerflor_atlas_003",
+              "name": "Mipolam Atlas — Apricot",
+              "article": "59856",
+              "price": "1 650 сом/м²",
+              "description": "Gerflor Mipolam Atlas - гомогенное виниловое покрытие для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал обладает высокой устойчивостью к истиранию, химическим воздействиям и механическим нагрузкам. Покрытие оснащено защитным слоем Easycare™ для облегчения ухода и сохранения внешнего вида на протяжении всего срока эксплуатации. Подходит для медицинских учреждений, образовательных объектов, офисов и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "5,8 mm" },
+                { "label": "Размер рулона", "value": " 2×20 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" }
+              ],
+              "images": [
+                "images/gom_gerflor_atlas_003_1.jpg",
+                "images/gom_gerflor_atlas_003_2.jpg"
+              ]
+            },
+            {
+              "id": "gom_gerflor_atlas_004",
+              "name": "Mipolam Atlas — Cool Gray",
+              "article": "60006",
+              "price": "1 650 сом/м²",
+              "description": "Gerflor Mipolam Atlas - гомогенное виниловое покрытие для коммерческих и общественных помещений с высокой проходимостью. Благодаря однородной структуре по всей толщине материал обладает высокой устойчивостью к истиранию, химическим воздействиям и механическим нагрузкам. Покрытие оснащено защитным слоем Easycare™ для облегчения ухода и сохранения внешнего вида на протяжении всего срока эксплуатации. Подходит для медицинских учреждений, образовательных объектов, офисов и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "5,8 mm" },
+                { "label": "Размер рулона", "value": " 2×20 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Тип укладки", "value": "Клеевой" }
+              ],
+              "images": [
+                "images/gom_gerflor_atlas_004_1.jpg",
+                "images/gom_gerflor_atlas_004_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vinfloor_femt",
+          "brand": "Vinfloor",
+          "logo": "images/logos/vinfloor.png",
+          "collection": "Femt",
+          "products": [
+            {
+              "id": "gom_vinfloor_femt_001",
+              "name": "Femt — Декор 1",
+              "article": "ГОМ-1512",
+              "price": "1 650 сом/м²",
+              "description": "VINFLOOR FEMT - токорассеивающее гомогенное ПВХ-покрытие для медицинских учреждений, лабораторий и технических помещений с повышенными требованиями к электростатической безопасности и гигиене. Покрытие обеспечивает стабильный отвод статического электричества, устойчиво к истиранию, дезинфицирующим средствам и интенсивным нагрузкам, отличается простотой ухода и длительным сроком службы.",
+              "specs": [
+                { "label": "Толщина", "value": "2 mm" },
+                { "label": "Размер рулона", "value": "2×20 m" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Класс износостойкости", "value": "34/43" },
+                { "label": "Тип укладки", "value": "клеевой" }
+              ],
+              "images": [
+                "images/gom_vinfloor_femt_001_1.jpg",
+                "images/gom_vinfloor_femt_001_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vinfloor_hj",
+          "brand": "Vinfloor",
+          "logo": "images/logos/vinfloor.png",
+          "collection": "HJ",
+          "products": [
+            {
+              "id": "gom_vinfloor_hj_001",
+              "name": "HJ — Декор 1",
+              "article": "1103",
+              "price": "— сом/м²",
+              "description": "VINFLOOR HJ - гомогенное токопроводящее ПВХ-покрытие для медицинских учреждений, операционных, лабораторий, серверных и других помещений с повышенными требованиями к электростатической безопасности. Покрытие обеспечивает постоянный отвод электрического заряда, устойчиво к интенсивным нагрузкам, воздействию химических и дезинфицирующих средств, а также отличается высокой износостойкостью и простотой ухода.",
+              "specs": [
+                { "label": "Толщина", "value": "600×600 mm" },
+                { "label": "Размер рулона", "value": "2 mm" },
+                { "label": "Защитный слой", "value": "2 mm" },
+                { "label": "Класс износостойкости", "value": "34/43" },
+                { "label": "Тип укладки", "value": "клеевой" }
+              ],
+              "images": [
+                "images/gom_vinfloor_hj_001_1.jpg",
+                "images/gom_vinfloor_hj_001_2.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "getero",
+      "name": "Гетерогенные покрытия",
+      "description": "Многослойные виниловые покрытия",
+      "icon": "hetero",
+      "collections": [
+        {
+          "id": "gerflor_taralay",
+          "brand": "Gerflor",
+          "logo": "images/logos/gerflor.png",
+          "collection": "Taralay Emotion",
+          "products": [
+            {
+              "id": "get_gerflor_taralay_001",
+              "name": "Taralay Emotion — Декор 1",
+              "article": "ГЕТ-001",
+              "price": "1 040 сом/м²",
+              "description": "Высококачественное гетерогенное ПВХ-покрытие для коммерческих помещений с высокой проходимостью. Защитный слой Protecsol® устойчив к царапинам и загрязнениям. Подходит для офисов, образовательных учреждений, медицинских и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 мм" },
+                { "label": "Размер рулона", "value": "2 м × 20 м" },
+                { "label": "Защитный слой", "value": "0.55 мм" },
+                { "label": "Тип укладки", "value": "Клеевой" }
+              ],
+              "images": [
+                "images/get_gerflor_taralay_001_1.jpg",
+                "images/get_gerflor_taralay_001_2.jpg"
+              ]
+            },
+            {
+              "id": "get_gerflor_taralay_002",
+              "name": "Taralay Emotion — Декор 2",
+              "article": "ГЕТ-002",
+              "price": "1 040 сом/м²",
+              "description": "Высококачественное гетерогенное ПВХ-покрытие для коммерческих помещений с высокой проходимостью. Защитный слой Protecsol® устойчив к царапинам и загрязнениям. Подходит для офисов, образовательных учреждений, медицинских и общественных пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 мм" },
+                { "label": "Размер рулона", "value": "2 м × 20 м" },
+                { "label": "Защитный слой", "value": "0.55 мм" },
+                { "label": "Тип укладки", "value": "Клеевой" }
+              ],
+              "images": [
+                "images/get_gerflor_taralay_002_1.jpg",
+                "images/get_gerflor_taralay_002_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "forbo_emerald",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Emerald Standart",
+          "products": [
+            {
+              "id": "get_forbo_emerald_001",
+              "name": "Emerald Standart — Декор 1",
+              "article": "ГЕТ-003",
+              "price": "940–1 185 сом/м²",
+              "description": "Коммерческое гетерогенное ПВХ-покрытие для помещений с высокой проходимостью. Высокая износостойкость, противоскользящие свойства. Подходит для офисов, учебных заведений, медицинских пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 мм" },
+                { "label": "Размер рулона", "value": "25 м × 200 см" },
+                { "label": "Защитный слой", "value": "0.55 мм" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 500 м²", "value": "1 185 сом" },
+                { "label": "Цена 500–2000 м²", "value": "940 сом" }
+              ],
+              "images": [
+                "images/get_forbo_emerald_001_1.jpg",
+                "images/get_forbo_emerald_001_2.jpg"
+              ]
+            },
+            {
+              "id": "get_forbo_emerald_002",
+              "name": "Emerald Standart — Декор 2",
+              "article": "ГЕТ-004",
+              "price": "940–1 185 сом/м²",
+              "description": "Коммерческое гетерогенное ПВХ-покрытие для помещений с высокой проходимостью. Высокая износостойкость, противоскользящие свойства. Подходит для офисов, учебных заведений, медицинских пространств.",
+              "specs": [
+                { "label": "Толщина", "value": "2 мм" },
+                { "label": "Размер рулона", "value": "25 м × 200 см" },
+                { "label": "Защитный слой", "value": "0.55 мм" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 500 м²", "value": "1 185 сом" },
+                { "label": "Цена 500–2000 м²", "value": "940 сом" }
+              ],
+              "images": [
+                "images/get_forbo_emerald_002_1.jpg",
+                "images/get_forbo_emerald_002_2.jpg"
+              ]
+            },
+            {
+              "id": "get_forbo_emerald_003",
+              "name": "Emerald Standart — Декор 3",
+              "article": "ГЕТ-005",
+              "price": "940–1 185 сом/м²",
+              "description": "Коммерческое гетерогенное ПВХ-покрытие для помещений с высокой проходимостью.",
+              "specs": [
+                { "label": "Толщина", "value": "2 мм" },
+                { "label": "Размер рулона", "value": "25 м × 200 см" },
+                { "label": "Защитный слой", "value": "0.55 мм" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 500 м²", "value": "1 185 сом" },
+                { "label": "Цена 500–2000 м²", "value": "940 сом" }
+              ],
+              "images": [
+                "images/get_forbo_emerald_003_1.jpg",
+                "images/get_forbo_emerald_003_2.jpg"
+              ]
+            },
+            {
+              "id": "get_forbo_emerald_004",
+              "name": "Emerald Standart — Декор 4",
+              "article": "ГЕТ-006",
+              "price": "940–1 185 сом/м²",
+              "description": "Коммерческое гетерогенное ПВХ-покрытие для помещений с высокой проходимостью.",
+              "specs": [
+                { "label": "Толщина", "value": "2 мм" },
+                { "label": "Размер рулона", "value": "25 м × 200 см" },
+                { "label": "Защитный слой", "value": "0.55 мм" },
+                { "label": "Тип укладки", "value": "Клеевой" },
+                { "label": "Цена до 500 м²", "value": "1 185 сом" },
+                { "label": "Цена 500–2000 м²", "value": "940 сом" }
+              ],
+              "images": [
+                "images/get_forbo_emerald_004_1.jpg",
+                "images/get_forbo_emerald_004_2.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lvt",
+      "name": "LVT покрытия",
+      "description": "Luxury Vinyl Tile — плитка и планки",
+      "icon": "lvt",
+      "collections": [
+        {
+          "id": "forbo_effekta",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Effekta Professional",
+          "products": [
+            { "id": "lvt_forbo_eff_001", "name": "Effekta Professional — Декор 1", "article": "LVT-001", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_001_1.jpg", "images/lvt_forbo_eff_001_2.jpg"] },
+            { "id": "lvt_forbo_eff_002", "name": "Effekta Professional — Декор 2", "article": "LVT-002", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_002_1.jpg", "images/lvt_forbo_eff_002_2.jpg"] },
+            { "id": "lvt_forbo_eff_003", "name": "Effekta Professional — Декор 3", "article": "LVT-003", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_003_1.jpg", "images/lvt_forbo_eff_003_2.jpg"] },
+            { "id": "lvt_forbo_eff_004", "name": "Effekta Professional — Декор 4", "article": "LVT-004", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_004_1.jpg", "images/lvt_forbo_eff_004_2.jpg"] },
+            { "id": "lvt_forbo_eff_005", "name": "Effekta Professional — Декор 5", "article": "LVT-005", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_005_1.jpg", "images/lvt_forbo_eff_005_2.jpg"] },
+            { "id": "lvt_forbo_eff_006", "name": "Effekta Professional — Декор 6", "article": "LVT-006", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_006_1.jpg", "images/lvt_forbo_eff_006_2.jpg"] },
+            { "id": "lvt_forbo_eff_007", "name": "Effekta Professional — Декор 7", "article": "LVT-007", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_forbo_eff_007_1.jpg", "images/lvt_forbo_eff_007_2.jpg"] }
+          ]
+        },
+        {
+          "id": "vinfloor_lvt",
+          "brand": "Vinfloor",
+          "logo": "images/logos/vinfloor.png",
+          "collection": "LVT Vinfloor",
+          "products": [
+            { "id": "lvt_vinfloor_001", "name": "LVT Vinfloor — Декор 1", "article": "LVT-008", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_vinfloor_001_1.jpg", "images/lvt_vinfloor_001_2.jpg"] },
+            { "id": "lvt_vinfloor_002", "name": "LVT Vinfloor — Декор 2", "article": "LVT-009", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_vinfloor_002_1.jpg", "images/lvt_vinfloor_002_2.jpg"] },
+            { "id": "lvt_vinfloor_003", "name": "LVT Vinfloor — Декор 3", "article": "LVT-010", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_vinfloor_003_1.jpg", "images/lvt_vinfloor_003_2.jpg"] },
+            { "id": "lvt_vinfloor_004", "name": "LVT Vinfloor — Декор 4", "article": "LVT-011", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер плитки", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Тип укладки", "value": "—" }], "images": ["images/lvt_vinfloor_004_1.jpg", "images/lvt_vinfloor_004_2.jpg"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kovrol",
+      "name": "Ковролин",
+      "description": "Рулонные ковровые покрытия",
+      "icon": "carpet",
+      "collections": [
+        {
+          "id": "forbo_basis_pro",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Tessera Basis Pro",
+          "products": [
+            { "id": "kov_forbo_basis_001", "name": "Tessera Basis Pro — Декор 1", "article": "КОВ-001", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_basis_001_1.jpg", "images/kov_forbo_basis_001_2.jpg"] },
+            { "id": "kov_forbo_basis_002", "name": "Tessera Basis Pro — Декор 2", "article": "КОВ-002", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_basis_002_1.jpg", "images/kov_forbo_basis_002_2.jpg"] },
+            { "id": "kov_forbo_basis_003", "name": "Tessera Basis Pro — Декор 3", "article": "КОВ-003", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_basis_003_1.jpg", "images/kov_forbo_basis_003_2.jpg"] },
+            { "id": "kov_forbo_basis_004", "name": "Tessera Basis Pro — Декор 4", "article": "КОВ-004", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_basis_004_1.jpg", "images/kov_forbo_basis_004_2.jpg"] },
+            { "id": "kov_forbo_basis_005", "name": "Tessera Basis Pro — Декор 5", "article": "КОВ-005", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_basis_005_1.jpg", "images/kov_forbo_basis_005_2.jpg"] }
+          ]
+        },
+        {
+          "id": "forbo_layout",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Tessera Layout & Outline",
+          "products": [
+            { "id": "kov_forbo_layout_001", "name": "Tessera Layout & Outline — Декор 1", "article": "КОВ-006", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_layout_001_1.jpg", "images/kov_forbo_layout_001_2.jpg"] },
+            { "id": "kov_forbo_layout_002", "name": "Tessera Layout & Outline — Декор 2", "article": "КОВ-007", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_layout_002_1.jpg", "images/kov_forbo_layout_002_2.jpg"] },
+            { "id": "kov_forbo_layout_003", "name": "Tessera Layout & Outline — Декор 3", "article": "КОВ-008", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_layout_003_1.jpg", "images/kov_forbo_layout_003_2.jpg"] },
+            { "id": "kov_forbo_layout_004", "name": "Tessera Layout & Outline — Декор 4", "article": "КОВ-009", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_layout_004_1.jpg", "images/kov_forbo_layout_004_2.jpg"] },
+            { "id": "kov_forbo_layout_005", "name": "Tessera Layout & Outline — Декор 5", "article": "КОВ-010", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_layout_005_1.jpg", "images/kov_forbo_layout_005_2.jpg"] }
+          ]
+        },
+        {
+          "id": "forbo_topology",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Tessera Topology",
+          "products": [
+            { "id": "kov_forbo_topology_001", "name": "Tessera Topology — Декор 1", "article": "КОВ-011", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_topology_001_1.jpg", "images/kov_forbo_topology_001_2.jpg"] },
+            { "id": "kov_forbo_topology_002", "name": "Tessera Topology — Декор 2", "article": "КОВ-012", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_topology_002_1.jpg", "images/kov_forbo_topology_002_2.jpg"] }
+          ]
+        },
+        {
+          "id": "forbo_basis_phase",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Tessera Basis Pro Phase",
+          "products": [
+            { "id": "kov_forbo_phase_001", "name": "Tessera Basis Pro Phase — Декор 1", "article": "КОВ-013", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_phase_001_1.jpg", "images/kov_forbo_phase_001_2.jpg"] },
+            { "id": "kov_forbo_phase_002", "name": "Tessera Basis Pro Phase — Декор 2", "article": "КОВ-014", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_phase_002_1.jpg", "images/kov_forbo_phase_002_2.jpg"] },
+            { "id": "kov_forbo_phase_003", "name": "Tessera Basis Pro Phase — Декор 3", "article": "КОВ-015", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_forbo_phase_003_1.jpg", "images/kov_forbo_phase_003_2.jpg"] }
+          ]
+        },
+        {
+          "id": "carus_1010",
+          "brand": "Carus",
+          "logo": "images/logos/carus.png",
+          "collection": "Carus 1010",
+          "products": [
+            { "id": "kov_carus_001", "name": "Carus 1010 — Декор 1", "article": "КОВ-016", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_carus_001_1.jpg", "images/kov_carus_001_2.jpg"] },
+            { "id": "kov_carus_002", "name": "Carus 1010 — Декор 2", "article": "КОВ-017", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Высота ворса", "value": "—" }, { "label": "Общая толщина", "value": "—" }, { "label": "Ширина рулона", "value": "—" }, { "label": "Тип ворса", "value": "—" }], "images": ["images/kov_carus_002_1.jpg", "images/kov_carus_002_2.jpg"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sport",
+      "name": "Спортивные полы",
+      "description": "Покрытия для спортзалов и площадок",
+      "icon": "sport",
+      "collections": [
+        {
+          "id": "forbo_sportline",
+          "brand": "Forbo",
+          "logo": "images/logos/forbo.png",
+          "collection": "Sportline Classic / Standart",
+          "products": [
+            { "id": "spo_forbo_001", "name": "Sportline Classic/Standart — Декор 1", "article": "СПО-001", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_001_1.jpg", "images/spo_forbo_001_2.jpg"] },
+            { "id": "spo_forbo_002", "name": "Sportline Classic/Standart — Декор 2", "article": "СПО-002", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_002_1.jpg", "images/spo_forbo_002_2.jpg"] },
+            { "id": "spo_forbo_003", "name": "Sportline Classic/Standart — Декор 3", "article": "СПО-003", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_003_1.jpg", "images/spo_forbo_003_2.jpg"] },
+            { "id": "spo_forbo_004", "name": "Sportline Classic/Standart — Декор 4", "article": "СПО-004", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_004_1.jpg", "images/spo_forbo_004_2.jpg"] },
+            { "id": "spo_forbo_005", "name": "Sportline Classic/Standart — Декор 5", "article": "СПО-005", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_005_1.jpg", "images/spo_forbo_005_2.jpg"] },
+            { "id": "spo_forbo_006", "name": "Sportline Classic/Standart — Декор 6", "article": "СПО-006", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_006_1.jpg", "images/spo_forbo_006_2.jpg"] },
+            { "id": "spo_forbo_007", "name": "Sportline Classic/Standart — Декор 7", "article": "СПО-007", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_007_1.jpg", "images/spo_forbo_007_2.jpg"] },
+            { "id": "spo_forbo_008", "name": "Sportline Classic/Standart — Декор 8", "article": "СПО-008", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_008_1.jpg", "images/spo_forbo_008_2.jpg"] },
+            { "id": "spo_forbo_009", "name": "Sportline Classic/Standart — Декор 9", "article": "СПО-009", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_forbo_009_1.jpg", "images/spo_forbo_009_2.jpg"] }
+          ]
+        },
+        {
+          "id": "gerflor_recreation",
+          "brand": "Gerflor",
+          "logo": "images/logos/gerflor.png",
+          "collection": "Recreation Leisure 65",
+          "products": [
+            { "id": "spo_gerflor_001", "name": "Recreation Leisure 65 — Декор 1", "article": "СПО-010", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_gerflor_001_1.jpg", "images/spo_gerflor_001_2.jpg"] },
+            { "id": "spo_gerflor_002", "name": "Recreation Leisure 65 — Декор 2", "article": "СПО-011", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_gerflor_002_1.jpg", "images/spo_gerflor_002_2.jpg"] },
+            { "id": "spo_gerflor_003", "name": "Recreation Leisure 65 — Декор 3", "article": "СПО-012", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_gerflor_003_1.jpg", "images/spo_gerflor_003_2.jpg"] }
+          ]
+        },
+        {
+          "id": "vinfloor_sport",
+          "brand": "Vinfloor",
+          "logo": "images/logos/vinfloor.png",
+          "collection": "Monochrome / Wood",
+          "products": [
+            { "id": "spo_vinfloor_001", "name": "Monochrome/Wood — Декор 1", "article": "СПО-013", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_vinfloor_001_1.jpg", "images/spo_vinfloor_001_2.jpg"] },
+            { "id": "spo_vinfloor_002", "name": "Monochrome/Wood — Декор 2", "article": "СПО-014", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_vinfloor_002_1.jpg", "images/spo_vinfloor_002_2.jpg"] },
+            { "id": "spo_vinfloor_003", "name": "Monochrome/Wood — Декор 3", "article": "СПО-015", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_vinfloor_003_1.jpg", "images/spo_vinfloor_003_2.jpg"] },
+            { "id": "spo_vinfloor_004", "name": "Monochrome/Wood — Декор 4", "article": "СПО-016", "price": "— сом/м²", "description": "Описание декора.", "specs": [{ "label": "Толщина", "value": "—" }, { "label": "Размер рулона", "value": "—" }, { "label": "Защитный слой", "value": "—" }, { "label": "Амортизация", "value": "—" }], "images": ["images/spo_vinfloor_004_1.jpg", "images/spo_vinfloor_004_2.jpg"] }
+          ]
+        }
+      ]
+    }
+  ]
+}
