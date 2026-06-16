@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP Optom — Каталог</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f3f0;
+    --white: #ffffff;
+    --red: #c0392b;
+    --red-soft: rgba(192, 57, 43, 0.08);
+    --text: #1a1a1a;
+    --text-muted: #888;
+    --border: #e0dbd4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    height: 100%; overflow: hidden;
+    overscroll-behavior: none;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .screen { position: fixed; inset: 0; display: none; flex-direction: column; background: var(--bg); z-index: 10; }
+  .screen.active { display: flex; }
+  .screen-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+
+  /* ШАПКА */
+  .app-header {
+    background: var(--white); border-bottom: 3px solid var(--red);
+    padding: 10px 16px; display: flex; align-items: center;
+    gap: 12px; flex-shrink: 0;
+  }
+  .app-header .logo-sm { height: 32px; width: auto; }
+  .app-header .header-title { font-size: 13px; font-weight: 600; color: var(--text); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .back-btn {
+    width: 36px; height: 36px; background: var(--red-soft);
+    border: 1px solid rgba(192,57,43,0.2); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; flex-shrink: 0; transition: background 0.15s;
+  }
+  .back-btn:active { background: rgba(192,57,43,0.18); }
+  .back-btn svg { width: 18px; height: 18px; stroke: var(--red); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* ПОИСК */
+  .search-bar { padding: 10px 12px 6px; background: var(--bg); flex-shrink: 0; }
+  .search-input-wrap {
+    position: relative; background: var(--white);
+    border: 1px solid var(--border); border-radius: 10px;
+    display: flex; align-items: center; overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .search-input-wrap svg { width: 18px; height: 18px; stroke: var(--text-muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-left: 12px; flex-shrink: 0; }
+  .search-input-wrap input { flex: 1; border: none; outline: none; padding: 10px 12px; font-size: 13px; font-family: 'Montserrat', sans-serif; color: var(--text); background: transparent; }
+  .search-input-wrap input::placeholder { color: var(--text-muted); }
+  .search-clear { width: 32px; height: 32px; margin-right: 4px; display: none; align-items: center; justify-content: center; cursor: pointer; border-radius: 50%; color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
+  .search-clear.visible { display: flex; }
+
+  /* ГЛАВНЫЙ ЭКРАН */
+  #main-screen { display: flex; }
+  .main-inner { max-width: 480px; margin: 0 auto; padding-bottom: 32px; width: 100%; }
+
+  .main-header { background: var(--white); padding: 18px 20px 16px; border-bottom: 3px solid var(--red); display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .main-header img { height: 52px; width: auto; object-fit: contain; }
+  .tagline { font-size: 10px; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; }
+
+  .banner { background: var(--white); margin: 12px 12px 0; border-radius: 8px; padding: 20px; border-left: 4px solid var(--red); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .banner-title { font-family: 'PT Serif', serif; font-size: 20px; font-weight: 700; line-height: 1.2; margin-bottom: 4px; }
+  .banner-title span { color: var(--red); }
+  .banner-sub { font-size: 12px; color: var(--text-muted); }
+
+  .section-header { padding: 18px 20px 10px; display: flex; align-items: center; gap: 10px; }
+  .section-header .line { height: 2px; width: 20px; background: var(--red); border-radius: 2px; }
+  .section-header span { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+
+  .catalogs { padding: 0 12px; display: flex; flex-direction: column; gap: 8px; }
+
+  .catalog-card { background: var(--white); border-radius: 8px; padding: 16px 18px; display: flex; align-items: center; gap: 16px; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid var(--border); transition: all 0.2s; opacity: 0; transform: translateY(12px); animation: fadeUp 0.35s ease forwards; }
+  .catalog-card:active { background: var(--red-soft); border-color: rgba(192,57,43,0.2); transform: scale(0.99); }
+  .cat-icon { width: 46px; height: 46px; background: var(--red-soft); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(192,57,43,0.15); }
+  .cat-icon svg { width: 22px; height: 22px; stroke: var(--red); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .card-info { flex: 1; }
+  .card-name { font-size: 14px; font-weight: 600; line-height: 1.3; }
+  .card-meta { font-size: 11px; color: var(--text-muted); margin-top: 3px; display: flex; align-items: center; gap: 6px; }
+  .card-meta .dot { width: 3px; height: 3px; background: var(--red); border-radius: 50%; opacity: 0.5; }
+  .card-arrow { width: 28px; height: 28px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .card-arrow svg { width: 13px; height: 13px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .footer { text-align: center; padding: 24px 20px 0; font-size: 11px; color: var(--text-muted); }
+
+  /* СПИСОК ТОВАРОВ */
+  #category-screen .screen-body { padding-bottom: 24px; }
+  .products-inner { max-width: 480px; margin: 0 auto; width: 100%; }
+
+  /* Заголовок коллекции */
+  .collection-header { display: flex; align-items: center; gap: 12px; padding: 16px 12px 8px; }
+  .brand-logo-wrap { height: 30px; display: flex; align-items: center; background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; flex-shrink: 0; }
+  .brand-logo-wrap img { height: 20px; width: auto; max-width: 80px; object-fit: contain; display: block; }
+  .brand-logo-wrap .brand-text { font-size: 11px; font-weight: 700; color: var(--red); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+  .collection-name { font-size: 13px; font-weight: 600; color: var(--text); flex: 1; }
+
+  .products-list { display: flex; flex-direction: column; gap: 8px; padding: 0 12px 12px; }
+
+  /* Сетка 2 колонки */
+  .products-list { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 12px 12px !important; }
+
+  .product-card { background: var(--white); border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 1px 6px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; cursor: pointer; transition: all 0.2s; opacity: 0; transform: translateY(10px); animation: fadeUp 0.3s ease forwards; }
+  .product-card:active { transform: scale(0.97); box-shadow: none; }
+
+  .product-thumb { width: 100%; aspect-ratio: 1/1; background: var(--red-soft); flex-shrink: 0; overflow: hidden; position: relative; }
+  .product-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .product-thumb .no-img { width: 100%; height: 100%; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .product-thumb .no-img svg { width: 44px; height: 44px; stroke: var(--red); fill: none; stroke-width: 1.3; opacity: 0.3; }
+
+  .product-info { flex: 1; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+  .product-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.3; }
+  .product-article { font-size: 10px; color: var(--text-muted); }
+  .product-price { font-size: 13px; font-weight: 700; color: var(--red); margin-top: 4px; }
+  .product-spec-preview { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+
+  .empty-search { text-align: center; padding: 48px 24px; color: var(--text-muted); font-size: 13px; }
+  .empty-search svg { width: 40px; height: 40px; stroke: var(--text-muted); fill: none; stroke-width: 1.3; margin: 0 auto 12px; display: block; opacity: 0.4; }
+
+  /* ДЕТАЛЬНАЯ СТРАНИЦА */
+  #product-screen .screen-body { padding-bottom: 32px; }
+  .product-detail { max-width: 480px; margin: 0 auto; }
+
+  .product-gallery { width: 100%; aspect-ratio: 4/3; position: relative; overflow: hidden; background: #f0ede9; }
+  .gallery-slides { display: flex; height: 100%; transition: transform 0.3s ease; }
+  .gallery-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
+  .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-slide .no-img-lg { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: var(--red-soft); color: var(--text-muted); font-size: 12px; }
+  .gallery-slide .no-img-lg svg { width: 40px; height: 40px; stroke: var(--red); fill: none; stroke-width: 1.3; opacity: 0.4; }
+
+  .gallery-dots { position: absolute; bottom: 8px; left: 0; right: 0; display: flex; justify-content: center; gap: 5px; }
+  .gallery-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.2s; }
+  .gallery-dot.active { background: white; }
+  .gallery-prev, .gallery-next { position: absolute; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background: rgba(0,0,0,0.35); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .gallery-prev { left: 8px; } .gallery-next { right: 8px; }
+  .gallery-prev svg, .gallery-next svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  .product-brand-row { padding: 14px 16px 0; display: flex; align-items: center; gap: 10px; }
+  .detail-brand-logo { height: 32px; background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; display: flex; align-items: center; }
+  .detail-brand-logo img { height: 22px; width: auto; max-width: 90px; object-fit: contain; }
+  .detail-brand-logo .brand-text-lg { font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: 0.08em; text-transform: uppercase; }
+  .detail-collection { font-size: 12px; color: var(--text-muted); }
+
+  .product-body { padding: 0 16px 16px; }
+  .product-header-row { padding-top: 10px; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .product-full-name { font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.3; flex: 1; }
+  .product-full-price { font-size: 17px; font-weight: 700; color: var(--red); white-space: nowrap; }
+  .product-art-row { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+  .product-desc { font-size: 13px; line-height: 1.6; color: #444; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+
+  .specs-block { margin-top: 14px; }
+  .specs-block-title { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .spec-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-label { color: var(--text-muted); }
+  .spec-value { font-weight: 600; color: var(--text); text-align: right; }
+
+  .error-wrap { padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px; }
+  .error-wrap strong { display: block; color: var(--text); margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<div id="main-screen" class="screen active">
+  <div class="screen-body">
+    <div class="main-inner">
+      <div class="main-header">
+        <img src="logo.png" alt="EP Optom">
+        <div class="tagline">Напольные покрытия оптом</div>
+      </div>
+      <div class="banner">
+        <div class="banner-title">Профессиональные<br><span>напольные покрытия</span></div>
+        <div class="banner-sub">Выберите категорию для просмотра</div>
+      </div>
+      <div class="section-header"><div class="line"></div><span>Категории</span></div>
+      <div class="catalogs" id="categories-list"></div>
+      <div class="footer">EP Optom © 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ЭКРАН КАТЕГОРИИ -->
+<div id="category-screen" class="screen">
+  <div class="app-header">
+    <div class="back-btn" id="back-to-main">
+      <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+    </div>
+    <div class="header-title" id="category-title">Категория</div>
+    <img src="logo.png" alt="" class="logo-sm">
+  </div>
+  <div class="search-bar">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Поиск по названию или артикулу…">
+      <div class="search-clear" id="search-clear">✕</div>
+    </div>
+  </div>
+  <div class="screen-body">
+    <div class="products-inner" id="products-inner"></div>
+  </div>
+</div>
+
+<!-- ЭКРАН ТОВАРА -->
+<div id="product-screen" class="screen">
+  <div class="app-header">
+    <div class="back-btn" id="back-to-category">
+      <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+    </div>
+    <div class="header-title" id="product-screen-title">Товар</div>
+    <img src="logo.png" alt="" class="logo-sm">
+  </div>
+  <div class="screen-body">
+    <div id="product-detail-wrap"></div>
+  </div>
+</div>
+
+<script>
+if (window.Telegram?.WebApp) {
+  window.Telegram.WebApp.ready();
+  window.Telegram.WebApp.expand();
+  if (window.Telegram.WebApp.disableVerticalSwipes) window.Telegram.WebApp.disableVerticalSwipes();
+}
+
+const ICONS = {
+  homogen: `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg>`,
+  hetero:  `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3 C8 7 8 17 12 21"/><path d="M12 3 C16 7 16 17 12 21"/></svg>`,
+  lvt:     `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>`,
+  carpet:  `<svg viewBox="0 0 24 24"><path d="M3 6 Q12 3 21 6 L21 18 Q12 21 3 18 Z"/><line x1="3" y1="12" x2="21" y2="12"/></svg>`,
+  sport:   `<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M6 20 C6 16 18 16 18 20"/><line x1="12" y1="11" x2="12" y2="15"/></svg>`,
+  default: `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>`
+};
+
+const NO_IMG_SVG = `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>`;
+
+let catalog = null;
+let currentCategoryId = null;
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById(id).querySelector('.screen-body')?.scrollTo(0, 0);
+}
+
+// ЗАГРУЗКА — поддерживаем оба формата: collections и products
+async function loadCatalog() {
+  try {
+    const res = await fetch('catalog.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    catalog = await res.json();
+    renderCategories();
+  } catch(e) {
+    document.getElementById('categories-list').innerHTML =
+      `<div class="error-wrap"><strong>Не удалось загрузить каталог</strong>${e.message}</div>`;
+  }
+}
+
+// Получить все продукты категории (из collections или products)
+function getCategoryProducts(cat) {
+  if (cat.collections) {
+    // Новый формат: categories -> collections -> products
+    const all = [];
+    cat.collections.forEach(col => {
+      (col.products || []).forEach(p => {
+        all.push({
+          ...p,
+          brand: col.brand,
+          brandLogo: col.logo,
+          collection: col.collection
+        });
+      });
+    });
+    return all;
+  }
+  // Старый формат: categories -> products
+  return cat.products || [];
+}
+
+// Получить количество позиций
+function getCategoryCount(cat) {
+  if (cat.collections) {
+    return cat.collections.reduce((sum, col) => sum + (col.products?.length || 0), 0);
+  }
+  return cat.products?.length || 0;
+}
+
+// КАТЕГОРИИ
+function renderCategories() {
+  const list = document.getElementById('categories-list');
+  list.innerHTML = '';
+  catalog.categories.forEach((cat, i) => {
+    const count = getCategoryCount(cat);
+    const card = document.createElement('div');
+    card.className = 'catalog-card';
+    card.style.animationDelay = (i * 0.05 + 0.05) + 's';
+    card.innerHTML = `
+      <div class="cat-icon">${ICONS[cat.icon] || ICONS.default}</div>
+      <div class="card-info">
+        <div class="card-name">${cat.name}</div>
+        <div class="card-meta">${cat.description || ''}<div class="dot"></div>${count} позиций</div>
+      </div>
+      <div class="card-arrow"><svg viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg></div>
+    `;
+    card.addEventListener('click', () => openCategory(cat.id));
+    list.appendChild(card);
+  });
+}
+
+// СПИСОК ТОВАРОВ с группировкой по коллекции
+function openCategory(id) {
+  const cat = catalog.categories.find(c => c.id === id);
+  if (!cat) return;
+  currentCategoryId = id;
+  document.getElementById('category-title').textContent = cat.name;
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-clear').classList.remove('visible');
+
+  const products = getCategoryProducts(cat);
+  renderProducts(products);
+  showScreen('category-screen');
+}
+
+function renderProducts(products) {
+  const inner = document.getElementById('products-inner');
+  inner.innerHTML = '';
+
+  if (!products?.length) {
+    inner.innerHTML = `<div class="empty-search">${NO_IMG_SVG}<span>Ничего не найдено</span></div>`;
+    return;
+  }
+
+  // Группируем по бренд+коллекция
+  const groupMap = new Map();
+  products.forEach(p => {
+    const key = (p.brand || '') + '||' + (p.collection || '');
+    if (!groupMap.has(key)) {
+      groupMap.set(key, { brand: p.brand, brandLogo: p.brandLogo, collection: p.collection, items: [] });
+    }
+    groupMap.get(key).items.push(p);
+  });
+
+  let cardIndex = 0;
+  groupMap.forEach(group => {
+    // Заголовок коллекции с логотипом
+    const header = document.createElement('div');
+    header.className = 'collection-header';
+    const logoHtml = group.brandLogo
+      ? `<img src="${group.brandLogo}" alt="${group.brand||''}" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span class='brand-text' style='display:none'>${group.brand||''}</span>`
+      : `<span class="brand-text">${group.brand||''}</span>`;
+    header.innerHTML = `
+      <div class="brand-logo-wrap">${logoHtml}</div>
+      <div class="collection-name">${group.collection || ''}</div>
+    `;
+    inner.appendChild(header);
+
+    // Товары
+    const list = document.createElement('div');
+    list.className = 'products-list';
+    group.items.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.style.animationDelay = (cardIndex * 0.04 + 0.04) + 's';
+      cardIndex++;
+
+      const specPreview = (p.specs || []).slice(0, 2).map(s => s.value).join(' · ');
+      const firstImg = p.images?.[0];
+      const imgHtml = firstImg
+        ? `<img src="${firstImg}" alt="${p.name}" loading="lazy" onerror="this.outerHTML='<div class=\\'no-img\\'>${NO_IMG_SVG}</div>'">`
+        : `<div class="no-img">${NO_IMG_SVG}</div>`;
+
+      card.innerHTML = `
+        <div class="product-thumb">${imgHtml}</div>
+        <div class="product-info">
+          <div class="product-name">${p.name}</div>
+          <div class="product-article">Артикул: ${p.article || '—'}</div>
+          <div class="product-price">${p.price || '—'}</div>
+          ${specPreview ? `<div class="product-spec-preview">${specPreview}</div>` : ''}
+        </div>
+      `;
+      card.addEventListener('click', () => openProduct(p.id));
+      list.appendChild(card);
+    });
+    inner.appendChild(list);
+  });
+}
+
+// ПОИСК
+const searchInput = document.getElementById('search-input');
+const searchClear = document.getElementById('search-clear');
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  searchClear.classList.toggle('visible', q.length > 0);
+  const cat = catalog.categories.find(c => c.id === currentCategoryId);
+  if (!cat) return;
+  const all = getCategoryProducts(cat);
+  if (!q) { renderProducts(all); return; }
+  const filtered = all.filter(p =>
+    (p.name || '').toLowerCase().includes(q) ||
+    (p.article || '').toLowerCase().includes(q) ||
+    (p.collection || '').toLowerCase().includes(q) ||
+    (p.brand || '').toLowerCase().includes(q)
+  );
+  renderProducts(filtered);
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchClear.classList.remove('visible');
+  const cat = catalog.categories.find(c => c.id === currentCategoryId);
+  if (cat) renderProducts(getCategoryProducts(cat));
+});
+
+// ПОИСК ПО ВСЕМ КАТЕГОРИЯМ при глобальном поиске (опционально)
+function findProductById(productId) {
+  for (const cat of catalog.categories) {
+    const products = getCategoryProducts(cat);
+    const p = products.find(pr => pr.id === productId);
+    if (p) return p;
+  }
+  return null;
+}
+
+// ДЕТАЛЬНАЯ СТРАНИЦА
+function openProduct(productId) {
+  const p = findProductById(productId);
+  if (!p) return;
+
+  document.getElementById('product-screen-title').textContent = p.name;
+
+  const images = p.images?.length ? p.images : [null];
+  const slidesHtml = images.map(src =>
+    src
+      ? `<div class="gallery-slide"><img src="${src}" alt="${p.name}" onerror="this.parentNode.innerHTML='<div class=\\'no-img-lg\\'>${NO_IMG_SVG}<span>Фото скоро появится</span></div>'"></div>`
+      : `<div class="gallery-slide"><div class="no-img-lg">${NO_IMG_SVG}<span>Фото скоро появится</span></div></div>`
+  ).join('');
+
+  const dotsHtml = images.length > 1
+    ? `<div class="gallery-dots">${images.map((_, i) => `<div class="gallery-dot ${i===0?'active':''}" data-i="${i}"></div>`).join('')}</div>` : '';
+  const navHtml = images.length > 1
+    ? `<div class="gallery-prev"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg></div><div class="gallery-next"><svg viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg></div>` : '';
+
+  const logoHtml = p.brandLogo
+    ? `<img src="${p.brandLogo}" alt="${p.brand||''}" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span class='brand-text-lg' style='display:none'>${p.brand||''}</span>`
+    : `<span class="brand-text-lg">${p.brand||''}</span>`;
+
+  const specsHtml = (p.specs||[]).length
+    ? `<div class="specs-block"><div class="specs-block-title">Характеристики</div>${p.specs.map(s=>`<div class="spec-row"><span class="spec-label">${s.label}</span><span class="spec-value">${s.value}</span></div>`).join('')}</div>` : '';
+
+  document.getElementById('product-detail-wrap').innerHTML = `
+    <div class="product-detail">
+      <div class="product-gallery">
+        <div class="gallery-slides" id="gallery-slides">${slidesHtml}</div>
+        ${dotsHtml}${navHtml}
+      </div>
+      <div class="product-brand-row">
+        <div class="detail-brand-logo">${logoHtml}</div>
+        ${p.collection ? `<div class="detail-collection">${p.collection}</div>` : ''}
+      </div>
+      <div class="product-body">
+        <div class="product-header-row">
+          <div class="product-full-name">${p.name}</div>
+          ${p.price ? `<div class="product-full-price">${p.price}</div>` : ''}
+        </div>
+        <div class="product-art-row">Артикул: ${p.article || '—'}</div>
+        ${p.description ? `<div class="product-desc">${p.description}</div>` : ''}
+        ${specsHtml}
+      </div>
+    </div>`;
+
+  if (images.length > 1) {
+    let cur = 0;
+    const slides = document.getElementById('gallery-slides');
+    const dots = document.querySelectorAll('.gallery-dot');
+    function goTo(i) {
+      cur = Math.max(0, Math.min(images.length-1, i));
+      slides.style.transform = `translateX(-${cur*100}%)`;
+      dots.forEach((d,di) => d.classList.toggle('active', di===cur));
+    }
+    document.querySelector('.gallery-prev').addEventListener('click', () => goTo(cur-1));
+    document.querySelector('.gallery-next').addEventListener('click', () => goTo(cur+1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.i)));
+    let sx = 0;
+    slides.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, {passive:true});
+    slides.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) goTo(dx<0?cur+1:cur-1); }, {passive:true});
+  }
+
+  showScreen('product-screen');
+}
+
+document.getElementById('back-to-main').addEventListener('click', () => showScreen('main-screen'));
+document.getElementById('back-to-category').addEventListener('click', () => showScreen('category-screen'));
+
+loadCatalog();
+</script>
+</body>
+</html>
