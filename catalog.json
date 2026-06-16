@@ -253,7 +253,7 @@
           "id": "vinfloor_femt",
           "brand": "Vinfloor",
           "logo": "images/logos/vinfloor.png",
-          "collection": "Femt",
+          "collection": "Токорассеивающий",
           "products": [
             {
               "id": "gom_vinfloor_femt_001",
@@ -294,7 +294,7 @@
           "id": "vinfloor_hj",
           "brand": "Vinfloor",
           "logo": "images/logos/vinfloor.png",
-          "collection": "HJ",
+          "collection": "Токопроводящий",
           "products": [
             {
               "id": "gom_vinfloor_hj_001",
@@ -2116,7 +2116,7 @@
                 },
                 {
                   "label": "Толщина слоя износа",
-                  "value": "—"
+                  "value": "0.7 mm"
                 },
                 {
                   "label": "Амортизация",
@@ -2145,7 +2145,7 @@
                 },
                 {
                   "label": "Толщина слоя износа",
-                  "value": "—"
+                  "value": "0.7 mm"
                 },
                 {
                   "label": "Амортизация",
@@ -2174,7 +2174,7 @@
                 },
                 {
                   "label": "Толщина слоя износа",
-                  "value": "—"
+                  "value": "0.7 mm"
                 },
                 {
                   "label": "Амортизация",
@@ -2203,7 +2203,7 @@
                 },
                 {
                   "label": "Толщина слоя износа",
-                  "value": "—"
+                  "value": "0.7 mm"
                 },
                 {
                   "label": "Амортизация",
